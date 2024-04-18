@@ -30,6 +30,7 @@
                   <th>&nbsp;</th>
                 </tr>
               </thead>
+			  <% let totalCost = 0; %>
               <% let i=0; %> <% for(i=0; i < allItem.length; i++) { %>
               <tr>
                 <td><%= allItem[i].item_name %></td>
@@ -55,10 +56,11 @@
                   ></a>
                 </td>
               </tr>
+			  <% totalCost += parseFloat(allItem[i].cost); %>
               <% } %>
               <tfoot>
                 <tr>
-                  <td colspan="7">There are <%= i %> items.</td>
+                  <td colspan="7">There are <%= i %> items for a total of $ <%= totalCost %></td>
                 </tr>
               </tfoot>
             </table>
