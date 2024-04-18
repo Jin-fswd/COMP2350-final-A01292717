@@ -28,7 +28,7 @@ async function getAllItem() {
 
 
 const addItem = async (postData) => {
-    console.log("postData: ", postData);
+    //console.log("postData: ", postData);
 
     let sqlInsertItem = `
         INSERT INTO purchase_item (item_name, item_description, cost, quantity)

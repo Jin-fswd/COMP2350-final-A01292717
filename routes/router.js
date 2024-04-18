@@ -38,8 +38,8 @@ router.post('/addItem', async (req, res) => {
         // console.log("post data : ")
         // console.log(postData)
         const addResult = await dbModel.addItem(postData); 
-        console.log(`Add item result: `);
-        console.log(addResult);
+        //console.log(`Add item result: `);
+        //console.log(addResult);
 
         if (addResult) {
             res.redirect('/'); 
@@ -77,7 +77,7 @@ router.get('/deleteItem', async (req, res) => {
 router.get('/increase', async (req, res) => {
     console.log("GET: incrase")
     const itemId = req.query.id;
-    console.log(`itemId : ${itemId}`);
+    //console.log(`itemId : ${itemId}`);
     if (!itemId) {
         res.render('error', { message: 'missing item id' });
     }
@@ -95,7 +95,7 @@ router.get('/increase', async (req, res) => {
 router.get('/decrease', async (req, res) => {
     console.log("GET: decrease")
     const itemId = req.query.id;
-    console.log(`itemId : ${itemId}`);
+    //console.log(`itemId : ${itemId}`);
     if (!itemId) {
         res.render('error', { message: 'missing item id' });
     }
